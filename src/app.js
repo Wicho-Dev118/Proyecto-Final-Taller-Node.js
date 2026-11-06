@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const PORT = 3000;
 
+//? Importar rutas
+const authRoutes = require('./routes/auth.routes');
+const empleadosRoutes = require('./routes/empleados.routes');
+
 //? Middlewares
 app.use(express.json());
 
@@ -11,6 +15,11 @@ app.get('/', (req, res) => {
     res.send('Sistema de Administración de Empleados "El Wichardo"');
 
 });
+
+//? Registrar rutas
+app.use('/apli/auth', authRoutes);
+app.use('/api/empleados', empleadosRoutes);
+
 
 
 //? Ruta prueba para recibir JSON
