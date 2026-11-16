@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 });
 
 //? Registrar rutas
-app.use('/apli/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 app.use('/api/empleados', empleadosRoutes);
 
 
