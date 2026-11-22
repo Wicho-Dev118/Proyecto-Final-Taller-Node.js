@@ -9,7 +9,7 @@
 /*? Diseño del documento */
 body {
     font-family: Arial, sans-serif;
-    background-color: #0F1439;
+    background-color: #070b2b;
     min-height: 100vh;
 }
 
@@ -24,19 +24,19 @@ body {
 
 /*? Tarjeta del formulario */
 .login-card {
-    background-color: #ffffff;
+    background-color: #0F1439;
     width: 100%;
     max-width: 400px;
     padding: 35px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(140, 158, 240, 0.5);
 }
 
 /*? Título */
 .login-card h1 {
     text-align: center;
     font-size: 25px;
-    color: #212529;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
@@ -112,7 +112,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: none;
+    background-color: transparent;
     color: white;
 }
 
@@ -136,10 +136,16 @@ body {
 #cerrar-sesion {
     background-color: #C0240C;
     color: #ffffff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 #cerrar-sesion:hover {
-    background-color: #C0240C;
+    background-color: #881908;
 }
 
 /*? Contenedor principal */
@@ -167,7 +173,7 @@ body {
     max-width: 650px;
 }
 
-/*? Botón cerrar sesión */
+/*? Barra de buscador */
 .search-container input {
     flex: 1;
     min-width: 0;
@@ -195,12 +201,12 @@ body {
 
 /*? Botón mostrar todos */
 #btn-mostrar-todos {
-    background-color: #6c757d;
+    background-color: #8523d4;
     color: #ffffff
 }
 
 #btn-mostrar-todos:hover {
-    background-color: #5c636a;
+    background-color: #5e0ea0;
 }
 
 /*? Botón agregar empleado */
@@ -216,11 +222,11 @@ body {
 
 /*? Tabla contenedor */
 .employee-table-container {
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
+    background-color: #a2c0ff;
+    border: 1px solid #ffffff;
     border-radius: 8px;
     overflow-x: auto;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 8px rgba(84, 217, 250, 0.425);
 }
 
 /*? Tabla */
@@ -232,8 +238,9 @@ body {
 
 /*? Encabezados */
 #tabla-empleados thead {
-    background-color: #212529;
+    background-color: #2d2f97;
     color: #ffffff;
+    text-align: center;
 }
 
 #tabla-empleados th {
@@ -267,7 +274,7 @@ body {
     color: #6c757d;
 }
 
-/*? Adapatación a pallas más pequeñas */
+/*? Adaptación */
 @media (max-width: 768px) {
 
     .dashboard-header{
@@ -351,7 +358,6 @@ body {
     color: #ffffff;
     border-radius: 5px;
     font-size: 15px;
-    width: 100%;
 }
 
 .form-group input:focus {
@@ -396,7 +402,7 @@ body {
 .btn-eliminar {
     background-color: #C0240C;
     color: white;
-    border: node;
+    border: none;
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;

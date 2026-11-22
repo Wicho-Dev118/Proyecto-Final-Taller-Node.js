@@ -257,7 +257,7 @@ function mostrarEmpleados(empleados) {
         //* Botón de eliminar
         const btnEliminar = document.createElement('button');
         btnEliminar.textContent = 'Eliminar';
-        btnEliminar.classList.add('btn-eleminar');
+        btnEliminar.classList.add('btn-eliminar');
 
         btnEliminar.addEventListener('click', () => {
             eliminarEmpleado(empleado.id);
