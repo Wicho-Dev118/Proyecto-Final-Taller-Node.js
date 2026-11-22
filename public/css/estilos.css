@@ -1,0 +1,423 @@
+
+/*? Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*? Diseño del documento */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0F1439;
+    min-height: 100vh;
+}
+
+/*? Contenedor principal */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/*? Tarjeta del formulario */
+.login-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/*? Título */
+.login-card h1 {
+    text-align: center;
+    font-size: 25px;
+    color: #212529;
+    margin-bottom: 10px;
+}
+
+/*? Texto descriptivo */
+.login-card > p {
+    text-align: center;
+    color: #6c757d;
+    margin-bottom: 30px;
+}
+
+/*? Grupos del formulario */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/*? Etiquetas */
+.form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #343a40;
+}
+
+/*? Campos de entrada */
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+/*? Campo seleccionado */
+.form-group input:focus {
+    border-color: #2200E0;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12);
+}
+
+/*? Botón de inicio de sesión */
+.login-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2200E0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/*? Efecto al pasar el cursor */
+.login-card button:hover {
+    background-color: #2200E0;
+}
+
+/*? Mensajes de error */
+.error-message {
+    color: #C0240C;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/*! Página administración ----------------------------------------- */
+
+/*? Encabezado del panel */
+.deshboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: none;
+    color: white;
+}
+
+.deshboard-header h1 {
+    font-size: 22px;
+    color: white;
+}
+
+/*? Botón cerrar sesión */
+.dashboard-header button,
+.dashboard-container button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size:  14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/*? Botón cerrar sesión */
+#cerrar-sesion {
+    background-color: #C0240C;
+    color: #ffffff;
+}
+
+#cerrar-sesion:hover {
+    background-color: #C0240C;
+}
+
+/*? Contenedor principal */
+.dashboard-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/*? Barra de herramientas */
+.dashboard-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+/*? Buscador */
+.search-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 650px;
+}
+
+/*? Botón cerrar sesión */
+.search-container input {
+    flex: 1;
+    min-width: 0;
+    padding: 11px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-container input:focus {
+    border-color: #2200E0;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12);
+}
+
+/*? Botón buscar */
+#btn-buscar {
+    background-color: #2200E0;
+    color: #ffffff;
+}
+
+#btn-buscar:hover {
+    background-color: #2200E0;
+}
+
+/*? Botón mostrar todos */
+#btn-mostrar-todos {
+    background-color: #6c757d;
+    color: #ffffff
+}
+
+#btn-mostrar-todos:hover {
+    background-color: #5c636a;
+}
+
+/*? Botón agregar empleado */
+#btn-agregar {
+    background-color: #28bd07;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+#btn-agregar:hover {
+    background-color: #237e0e;
+}
+
+/*? Tabla contenedor */
+.employee-table-container {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/*? Tabla */
+#tabla-empleados {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/*? Encabezados */
+#tabla-empleados thead {
+    background-color: #212529;
+    color: #ffffff;
+}
+
+#tabla-empleados th {
+    padding: 15px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/*? Celdas */
+#tabla-empleados td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 14px;
+    color: #343a40;
+}
+
+/*? Filas */
+#tabla-empleados tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/*? Ultima Fila */
+#tabla-empleados tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/*? Mensaje abajo de la tabla */
+#mensaje-tabla {
+    padding: 15px;
+    text-align: center;
+    color: #6c757d;
+}
+
+/*? Adapatación a pallas más pequeñas */
+@media (max-width: 768px) {
+
+    .dashboard-header{
+        padding: 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 18px;
+    }
+
+    .dashboard-container {
+        padding: 20px;
+    }
+
+    .dashboard-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-container {
+        max-width: none;
+        flex-wrap: wrap;
+    }
+
+    #btn-agregar {
+        width: 100%;
+    }
+}
+
+/*? Para que se adapte a pantallas pequeñas, porque?, por que no?*/
+@media (max-width: 480px) { 
+    .search-container{
+        flex-direction: column;
+    }
+
+    .search-container button {
+        width: 100%;
+    }
+}
+
+/*! Modal para agregar empleados*/
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: #2d314ed3;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #0F1439;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+}
+
+.modal-content h2 {
+    margin-bottom: 25px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2200E0;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-actions button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#btn-guardar {
+    background-color: #28bd07;
+    color: #ffffff;
+}
+
+#btn-guardar:hover {
+    background-color: #237e0e;
+}
+
+#btn-cancelar {
+    background-color: #C0240C;
+    color: #ffffff
+}
+
+#btn-cancelar:hover {
+    background-color: #910808;
+}
+
+/*! Botón eliminar empleado*/
+.btn-eliminar {
+    background-color: #C0240C;
+    color: white;
+    border: node;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background-color: #910808;
+}
+
+
+/*! Botón editar empleado*/
+.btn-editar {
+    background-color: #2200E0;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-editar:hover {
+    background-color: #100261;
+}

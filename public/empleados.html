@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Administración de empleados el Wichardo</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    
+</head>
+
+
+<body>
+    <header class="deshboard-header">
+        <h1>Sistema de Empleados "El Wichardo"</h1>
+    </header>
+
+    <button id="cerrar-sesion">Cerrar Sesión</button>
+
+    <main class="dashboard-container">
+        <section clas="dashboard-toolbar">
+
+            <div class="search-container">
+                <input
+                type="text"
+                id="buscar-empleado"
+                placeholder="Buscar empleado por nombre..."
+                >
+
+                <button id="btn-buscar">Buscar</button>
+                <button id="btn-mostrar-todos">Mostrar Todos</button>
+                <button id="btn-agregar">Agregar Empleado</button>
+            </div>
+        </section>
+
+
+
+        <section class="employee-table-container">
+            <table id="tabla-empleados">
+
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        
+                        <th>Nombre</th>
+                        
+                        <th>Apellidos</th>
+                        
+                        <th>Teléfono</th>
+                        
+                        <th>Correo</th>
+                        
+                        <th>Dirección</th>
+                        
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody id="lista-empleados">
+                </tbody>
+
+            </table>
+
+            <p id="mensaje-tabla"></p>
+        </section>
+
+
+        <!--! Agregar empleados-->
+        <div id="modal-empleado" class="modal">
+
+            <div class="modal-content">
+                <h2>Agregar empleado</h2>
+
+                <form id="form-empleado">
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" id="telefono" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="text" id="correo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" required>
+                    </div>
+
+                    <p id="mensaje-formulario" class="error-message"></p>
+
+                    <div class="modal-actions">
+                        
+                        <button type="submit" id="btn-guardar">
+                            Guardar empleado
+                        </button>
+
+                        <button type="button" id="btn-cancelar">
+                            Cancelar
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/empleados.js"></script>
+</body>
+</html>
